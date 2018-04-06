@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using WebApi.Monitoring.Domain.Enums;
 using WebApi.Monitoring.Monitoring.Attributes;
-using WebApi.Monitoring.Monitoring.Enums;
 
 namespace WebApi.Monitoring.Controllers
 {
@@ -23,14 +23,14 @@ namespace WebApi.Monitoring.Controllers
         }
 
         [HttpGet("Items")]
-        [APIMonitoring(APIActions.API_Get)]
+        [APIMonitoring(APIAction.API_Get)]
         public IEnumerable<string> GetValues()
         {
             return new string[] { "value1", "value2" };
         }
 
         [HttpDelete("{id}")]
-        [APIMonitoring(APIActions.API_Delete)]
+        [APIMonitoring(APIAction.API_Delete)]
         public void Delete(int id)
         {
         }

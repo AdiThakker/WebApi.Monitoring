@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using WebApi.Monitoring.Monitoring.Enums;
+using WebApi.Monitoring.Domain.Enums;
 using WebApi.Monitoring.Monitoring.Logic;
 
 namespace WebApi.Monitoring.Monitoring.Attributes
 {
     public class APIMonitoringAttribute : ActionFilterAttribute
     {
-        public APIActions ApiAction { get; private set; }
+        public APIAction ApiAction { get; private set; }
 
-        public APIMonitoringAttribute(APIActions apiAction)
+        public APIMonitoringAttribute(APIAction apiAction)
         {
             this.ApiAction = apiAction;
         }

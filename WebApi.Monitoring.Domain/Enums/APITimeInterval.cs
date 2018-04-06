@@ -1,6 +1,6 @@
-﻿namespace WebApi.Monitoring.Monitoring.Enums
+﻿namespace WebApi.Monitoring.Domain.Enums
 {
-    public enum APITimeIntervals : int
+    public enum APITimeInterval : int
     {
         Unknown = 0,
         Year = 1,

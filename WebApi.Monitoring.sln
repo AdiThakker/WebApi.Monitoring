@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Monitoring", "WebApi.Monitoring\WebApi.Monitoring.csproj", "{09EA6152-4DD3-4C85-8CBE-ABC8ABBFAACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Monitoring", "WebApi.Monitoring\WebApi.Monitoring.csproj", "{09EA6152-4DD3-4C85-8CBE-ABC8ABBFAACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Monitoring.Domain", "WebApi.Monitoring.Domain\WebApi.Monitoring.Domain.csproj", "{E4079719-9440-4870-A0B9-AFB2E1E555D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Monitoring.Infrastructure", "WebApi.Monitoring.Infrastructure\WebApi.Monitoring.Infrastructure.csproj", "{D4B7CFAF-9096-43BA-BA0B-B2EB82B00586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{09EA6152-4DD3-4C85-8CBE-ABC8ABBFAACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09EA6152-4DD3-4C85-8CBE-ABC8ABBFAACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09EA6152-4DD3-4C85-8CBE-ABC8ABBFAACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4079719-9440-4870-A0B9-AFB2E1E555D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4079719-9440-4870-A0B9-AFB2E1E555D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4079719-9440-4870-A0B9-AFB2E1E555D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4079719-9440-4870-A0B9-AFB2E1E555D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B7CFAF-9096-43BA-BA0B-B2EB82B00586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B7CFAF-9096-43BA-BA0B-B2EB82B00586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B7CFAF-9096-43BA-BA0B-B2EB82B00586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B7CFAF-9096-43BA-BA0B-B2EB82B00586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
