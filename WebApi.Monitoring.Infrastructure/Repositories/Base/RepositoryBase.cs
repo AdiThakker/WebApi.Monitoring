@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using WebApi.Monitoring.Domain.Interfaces.Base;
 using WebApi.Monitoring.Infrastructure.EntityFramework;
@@ -11,7 +13,9 @@ namespace WebApi.Monitoring.Infrastructure.Repositories.Base
         private bool disposed = false;
         protected readonly ApiContext ApiContext;
 
-        protected RepositoryBase(ApiContext context) => this.ApiContext = context ?? throw new ArgumentNullException(nameof(context));
+        protected RepositoryBase(ApiContext context) =>
+                                    this.ApiContext = context
+                                                        ?? throw new ArgumentNullException(nameof(context));
 
         public T Add(T entity)
         {
@@ -22,32 +26,34 @@ namespace WebApi.Monitoring.Infrastructure.Repositories.Base
 
         public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            this.ApiContext.Set<T>().Remove(entity);
+            this.ApiContext.SaveChanges();
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return this.ApiContext.Set<T>().AsEnumerable();
         }
 
         public IEnumerable<T> GetAllWhere(Expression<Func<T, bool>> matchExpression)
         {
-            throw new NotImplementedException();
+            return this.ApiContext.Set<T>().Where(matchExpression);
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return this.ApiContext.Set<T>().Find(id);
         }
 
         public T GetSingleWhere(Expression<Func<T, bool>> matchExpression)
         {
-            throw new NotImplementedException();
+            return this.ApiContext.Set<T>().Where(matchExpression).FirstOrDefault();
         }
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            this.ApiContext.Entry(entity).State = EntityState.Modified;
+            this.ApiContext.SaveChanges();
         }
 
         #region IDisposable Support

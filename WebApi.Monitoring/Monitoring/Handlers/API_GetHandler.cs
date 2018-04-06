@@ -7,7 +7,7 @@ namespace WebApi.Monitoring.Monitoring.Handlers
     {
         public Tuple<bool, string> CanHandle(int input)
         {
-            throw new NotImplementedException();
+            return new Tuple<bool, string>(false, "Nothing yet!");
         }
     }
 }
