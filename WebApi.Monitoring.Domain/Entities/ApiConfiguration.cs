@@ -6,7 +6,7 @@ namespace WebApi.Monitoring.Domain.Entities
 {
     public class ApiConfiguration : EntityBase<int>, IEntity
     {
-        public APIAction ApiAction { get; private set; }
+        public APIAction ApiAction { get; set; }
 
         public APITimeInterval ApiInterval { get; set; }
 

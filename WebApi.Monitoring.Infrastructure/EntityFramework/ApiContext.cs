@@ -5,12 +5,12 @@ namespace WebApi.Monitoring.Infrastructure.EntityFramework
 {
     public class ApiContext : DbContext
     {
-        protected ApiContext()
+        public ApiContext()
             : base()
         {
         }
 
-        protected ApiContext(DbContextOptions<ApiContext> options)
+        public ApiContext(DbContextOptions<ApiContext> options)
                 : base(options)
         {
         }

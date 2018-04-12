@@ -20,7 +20,7 @@ namespace WebApi.Monitoring.Domain
             _lookup.AddOrUpdate(key, create, (index, createFunc) => createFunc);
         }
 
-        public static TResult Get<TResult>() where TResult : Type
+        public static TResult Get<TResult>()
         {
             var func = _lookup.GetValueOrDefault(typeof(TResult));
 

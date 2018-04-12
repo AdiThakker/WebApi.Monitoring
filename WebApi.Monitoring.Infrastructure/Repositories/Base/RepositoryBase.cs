@@ -13,6 +13,13 @@ namespace WebApi.Monitoring.Infrastructure.Repositories.Base
         private bool disposed = false;
         protected readonly ApiContext ApiContext;
 
+        protected RepositoryBase()
+            : this(new ApiContext(new DbContextOptionsBuilder<ApiContext>()
+                                        .UseInMemoryDatabase(databaseName: "In_Memory_Db")
+                                        .Options))
+        {
+        }
+
         protected RepositoryBase(ApiContext context) =>
                                     this.ApiContext = context
                                                         ?? throw new ArgumentNullException(nameof(context));

@@ -9,6 +9,11 @@ namespace WebApi.Monitoring.Infrastructure.Repositories
 {
     public class ApiConfigurationRepository : RepositoryBase<ApiConfiguration>, IApiConfigurationRepository
     {
+        public ApiConfigurationRepository()
+            : base()
+        {
+        }
+
         protected ApiConfigurationRepository(ApiContext context)
             : base(context)
         {
