@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Reflection;
 using WebApi.Monitoring.Domain.Enums;
-using WebApi.Monitoring.Monitoring.Interfaces;
+using WebApi.Monitoring.Domain.Interfaces;
 
-namespace WebApi.Monitoring.Monitoring.Logic
+namespace WebApi.Monitoring.Domain.Logic
 {
     public class APIHandlerLogic
     {

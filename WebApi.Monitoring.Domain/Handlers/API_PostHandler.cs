@@ -1,7 +1,7 @@
 ﻿using System;
-using WebApi.Monitoring.Monitoring.Interfaces;
+using WebApi.Monitoring.Domain.Interfaces;
 
-namespace WebApi.Monitoring.Monitoring.Handlers
+namespace WebApi.Monitoring.Domain.Handlers
 {
     public class API_PostHandler : IActionHandler<int, string>
     {

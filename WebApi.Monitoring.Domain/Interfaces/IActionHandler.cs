@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebApi.Monitoring.Monitoring.Interfaces
+namespace WebApi.Monitoring.Domain.Interfaces
 {
     interface IActionHandler<TInput, TResult>
     {

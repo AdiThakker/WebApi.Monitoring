@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using WebApi.Monitoring.Attributes;
 using WebApi.Monitoring.Domain.Enums;
-using WebApi.Monitoring.Monitoring.Attributes;
 
 namespace WebApi.Monitoring.Controllers
 {

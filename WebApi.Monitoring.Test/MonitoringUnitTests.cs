@@ -3,6 +3,7 @@ using WebApi.Monitoring.Domain;
 using WebApi.Monitoring.Domain.Entities;
 using WebApi.Monitoring.Domain.Enums;
 using WebApi.Monitoring.Domain.Interfaces;
+using WebApi.Monitoring.Domain.Interfaces.Repositories;
 using WebApi.Monitoring.Infrastructure.Repositories;
 
 namespace WebApi.Monitoring.Test
