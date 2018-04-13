@@ -17,7 +17,7 @@ namespace WebApi.Monitoring.Domain.Logic
             if (instance == null)
                 throw new InvalidOperationException();
 
-            return instance.CanHandle(input);
+            return instance.Handle(input);
         }
 
         private static IActionHandler<TInput, TResult> GetHandler<TInput, TResult>(APIAction action)

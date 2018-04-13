@@ -5,9 +5,9 @@ namespace WebApi.Monitoring.Domain.Handlers
 {
     public class API_PostHandler : IActionHandler<int, string>
     {
-        public Tuple<bool, string> CanHandle(int input)
+        public Tuple<bool, string> Handle(int input)
         {
-            throw new NotImplementedException();
+            return new Tuple<bool, string>(false, "Not allowed to Post!!!");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using WebApi.Monitoring.Domain.Entities;
+﻿using WebApi.Monitoring.Domain.Entities;
 using WebApi.Monitoring.Domain.Enums;
 using WebApi.Monitoring.Domain.Interfaces.Repositories;
 using WebApi.Monitoring.Infrastructure.EntityFramework;
@@ -21,7 +20,7 @@ namespace WebApi.Monitoring.Infrastructure.Repositories
 
         public ApiConfiguration GetApiConfiguration(APIAction action)
         {
-            return this.GetSingleWhere(item => Enum.GetName(typeof(APIAction), item.ApiAction.ToString()).Equals(action.ToString()));
+            return this.GetSingleWhere(item => (int)item.ApiAction == (int)action);
         }
     }
 }
