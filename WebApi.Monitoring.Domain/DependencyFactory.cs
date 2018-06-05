@@ -17,7 +17,7 @@ namespace WebApi.Monitoring.Domain
                 throw new ArgumentNullException(nameof(create));
 
 
-            _lookup.AddOrUpdate(key, create, (index, createFunc) => createFunc);
+            _lookup.AddOrUpdate(key, create, (index, createFunc) => create);
         }
 
         public static TResult Get<TResult>()
